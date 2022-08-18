@@ -1,0 +1,135 @@
+:root {
+  --body: #d3d6cd;
+  --shadowbody: 20px 20px 60px #b3b6ae, -20px -20px 60px #f3f6ec;
+  font-size: 62.5%;
+  --shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+  background: var(--body);
+  font-size: 1.6rem;
+}
+.box {
+  box-shadow: var(--shadowbody);
+  margin: 10rem auto;
+  max-width: 50rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+}
+.profile {
+  background-color: #f3f6ec;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--body);
+}
+.tag {
+  color: var(--body);
+  border-radius: 100rem;
+  background: #f3f6ec;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+.form {
+  margin-top: 1.5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+}
+.field {
+  margin-bottom: 0.5rem;
+  padding-right: 0.9rem;
+}
+.reg {
+  line-height: 1.6;
+  width: 29.8rem;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #000;
+  border: 0.1rem solid var(--body);
+  background: var(--body);
+}
+.reg[type="text"]:focus {
+  /* width: 29.8rem; */
+  border-color: black;
+}
+.btn {
+  border-radius: 3rem;
+  border: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  background: var(--body);
+  color: #000;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 8rem;
+}
+.btn:hover {
+  text-shadow: var(--shadow);
+}
+.btnup {
+  border: none;
+  background: var(--body);
+  padding: 0.5rem;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow);
+}
+.btnup:hover {
+  color: #0d0e0c;
+  background: #70726b;
+}
+h4 {
+  color: #70726b;
+  font-size: 2.2rem;
+  position: relative;
+  bottom: 4.6rem;
+  text-shadow: 0 3px 10px rgba(19, 20, 20, 0.2);
+}
+@media (max-width: 883px) {
+  .box {
+    grid-template-columns: 1fr;
+    box-shadow: none;
+    margin: 9rem auto;
+  }
+  .field {
+    padding-left: 1.2rem;
+  }
+  .form {
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width:883px) {
+
+  .form{
+    text-align: left;
+    background-color:#fff;
+    align-items: flex-start;
+  }
+
+  .field {
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+  }
+}
+@media (max-width:437px) {
+.field {
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+.reg {
+  width: 100%;
+}
+}
